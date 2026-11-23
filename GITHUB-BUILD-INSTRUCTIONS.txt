@@ -1,0 +1,25 @@
+STORAGEESP - GITHUB ACTIONS BUILD (Minecraft Forge 1.21.11)
+
+Do not upload this ZIP directly to GitHub as a single file.
+
+1. Create a separate PUBLIC repository at https://github.com/new
+   Suggested name: StorageESP-Forge
+   Set default branch main. Do NOT initialize with README if possible.
+2. Extract this ZIP on Windows (right click > Extract all).
+3. Open the extracted folder. Select ALL items *inside* it: .github, src,
+   build.gradle, gradle.properties, settings.gradle, and others.
+4. Open repository, choose "uploading an existing file" (or Add file > Upload files).
+   Drag the selected items into GitHub. Click Commit changes.
+5. Open repository > Actions > Build StorageESP (Forge 1.21.11).
+   Build should start automatically after commit. If not, choose Run workflow.
+6. When you see a green check mark, open the workflow run and its Artifacts.
+   Download "StorageESP-Forge-1.21.11-JAR" and extract to obtain *.jar.
+7. Install Forge 1.21.11 in your Minecraft launcher, then put the mod JAR
+   into that instance's mods folder. DO NOT put it into a Fabric instance.
+
+If GitHub shows a RED X, open the failed run > Compile and package Forge mod.
+You can also download the StorageESP-build-log artifact and share it for diagnosis.
+
+This project has NOT been independently compiled or tested in Minecraft.
+The GitHub workflow supplies JDK 21 and 25 to avoid the Mavenizer toolchain
+problem encountered on Windows.

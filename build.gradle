@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'net.minecraftforge.gradle' version '[7.0.29,8.0)'
+}
+
+version = '1.2.1'
+group = 'com.example.storageesp'
+base.archivesName = 'StorageESP-1.21.11'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+minecraft {
+    mappings channel: 'official', version: '1.21.11'
+
+    runs {
+        configureEach {
+            workingDir.convention layout.projectDirectory.dir('run')
+            systemProperty 'forge.logging.console.level', 'debug'
+        }
+        register('client') {}
+        register('server') { args '--nogui' }
+    }
+}
+
+repositories {
+    minecraft.mavenizer(it)
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
+    mavenCentral()
+}
+
+dependencies {
+    implementation minecraft.dependency('net.minecraftforge:forge:1.21.11-61.2.5')
+    annotationProcessor 'net.minecraftforge:eventbus-validator:7.0.5'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

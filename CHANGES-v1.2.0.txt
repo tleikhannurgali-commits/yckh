@@ -1,0 +1,8 @@
+StorageESP 1.2.0 (Forge 1.21.11)
+- Warden: observed timers cached in memory; UNKNOWN is gray not green; server timer re-sync; TextDisplay names support.
+- Player ESP: only current alive entities, color outlined tracer, dot endpoint, health heart/10-segment bar, armor material/pieces, distance/name.
+- Storage ESP: barrel, shulker, ender chest independently enabled; scan every 8 ticks, 260 box / 12 tracer limits.
+- Marks: my death, other death only if seen, manual M; last seen optional cyan (10s), off by default.
+- GUI: settings for Player, Storage, Marks, scrolling. Saved ESP switches persist.
+
+NOT COMPILED or GAME-TESTED yet; run GitHub Actions build and test in singleplayer before using on servers.

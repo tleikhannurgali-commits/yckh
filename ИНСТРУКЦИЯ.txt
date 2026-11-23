@@ -1,0 +1,12 @@
+Storage ESP — upload to GitHub
+
+1. Extract StorageESP-GitHub-Ready.zip on your computer.
+2. On GitHub, open https://github.com/aprol77776-stack/Claude-GPT-mod
+3. Click Add file -> Upload files.
+4. Drag ALL contents of the extracted folder (including .github, src, build.gradle, settings.gradle, etc.) into the upload area. Keep folder structure. Do not drag the ZIP itself.
+5. Click Commit changes.
+6. Open Actions -> Build Storage ESP 1.21.11.
+7. If green, download the StorageESP-Forge-1.21.11 artifact containing the JAR.
+8. If red, send a screenshot or log of the error so we can fix the project.
+
+The project has not been compiled yet. The workflow will attempt the first real compilation.

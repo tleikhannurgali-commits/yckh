@@ -1,0 +1,23 @@
+STORAGE ESP - Forge 1.21.11
+
+1. Right-click the ZIP -> Extract All.
+2. Open the extracted StorageESP folder.
+3. Double-click BUILD_MOD.cmd (NOT the ZIP preview).
+4. On success the build\libs folder opens with the finished JAR.
+5. Put the JAR in your Minecraft Forge 1.21.11 mods folder.
+
+Requirements: Windows 10/11, JDK 21 in PATH, internet access.
+First run downloads Gradle + Forge/Minecraft dependencies.
+
+If anything fails, the command window will NOT disappear and build-log.txt
+will contain the error message. Send build-log.txt for diagnosis.
+
+This archive contains source code + an automatic build launcher.
+The JAR is not precompiled, and the Forge build was not tested locally.
+
+Fixes included:
+ - Correct Forge 1.21.11 GUI HUD registration using AddGuiOverlayLayersEvent
+   (not the non-existent RenderGuiEvent or NeoForge RenderGuiLayerEvent).
+ - Uses a real ForgeLayeredDraw named layer to draw the radar.
+ - Correct .github/workflows/build.yml location for optional GitHub Actions.
+ - Improved Windows launcher with persistent error output and logs.

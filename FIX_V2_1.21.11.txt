@@ -1,0 +1,17 @@
+StorageESP CompileFix v2 - Minecraft Forge 1.21.11
+
+Fixed eight compilation errors in ModScreen.java:
+- GUI matrix stack: pushPose/popPose -> pushMatrix/popMatrix
+- GUI 2D transforms: translate(x,y), scale(x,y)
+- Screen.mouseClicked now receives MouseButtonEvent and boolean doubleClick
+- Click coordinates and button are read from event.x()/event.y()/event.button()
+
+BUILD_MOD.ps1 now writes full build output to gradle-full.log automatically.
+
+HOW TO USE:
+1. Extract ZIP to a new folder (do not mix with old StorageESP source).
+2. Open StorageESP and double click BUILD_MOD.cmd.
+3. If successful: build\libs\StorageESP-1.21.11-1.0.0.jar
+4. If a failure persists, send gradle-full.log.
+
+This build was not tested with full ForgeGradle dependencies in this environment.
